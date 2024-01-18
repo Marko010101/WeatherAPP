@@ -1,0 +1,11 @@
+{
+  "name": "tbc",
+  "version": "1.0.0",
+  "description": "\"# TBC\"",
+  "default": "index.html",
+  "scripts": {
+    "start": " index.html"
+  },
+  "author": "Marko",
+  "license": "ISC"
+}
