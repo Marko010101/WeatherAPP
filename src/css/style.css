@@ -271,7 +271,7 @@ body {
 
 .navigation__svg {
   position: relative;
-  margin: 22px 0px 22px calc((100% - 980px) * 0.5);
+  margin: 22px 0px 19px calc((100% - 980px) * 0.5);
   left: 0px;
   grid-area: 1 / 1 / 2 / 2;
   justify-self: start;
@@ -312,7 +312,7 @@ body {
   color: rgb(var(--txt, var(--color_15)));
 
   display: inline-block;
-  padding: 0 1.95rem;
+  padding: 0 1.94rem;
   transition: var(--trans, color 0.4s ease 0s);
 
   line-height: 2.6rem;
@@ -320,4 +320,87 @@ body {
 .navigation__text-active,
 .navigation__text:hover {
   color: rgb(var(--txts, var(--color_14)));
+}
+/* header-end //// main-start */
+.main {
+  position: static;
+  display: grid;
+  height: auto;
+  width: 100%;
+  min-height: 40px;
+  grid-template-rows: repeat(4, min-content) 1fr;
+  grid-template-columns: 100%;
+  padding-bottom: 0px;
+  box-sizing: border-box;
+}
+.section-title {
+  --fill-layer-image-opacity: 1;
+  --bg-overlay-color: rgb(43, 43, 43);
+  --bg-gradient: none;
+  min-width: 980px;
+
+  left: 0;
+  margin-left: 0;
+  width: 100%;
+  min-width: 0;
+}
+.section-title-image {
+  position: relative;
+}
+.title-background-image {
+  width: 100%;
+  height: 352px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.wider-image {
+  display: none;
+}
+.section-title-text-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  height: auto;
+  width: 100%;
+  min-height: 352px;
+  grid-template-rows: 1fr;
+  grid-template-columns: 100%;
+}
+.section-title-text {
+  position: relative;
+  margin: 96px 0px 10px calc((100% - 980px) * 0.5);
+  left: 0px;
+  grid-area: 1 / 1 / 2 / 2;
+  justify-self: start;
+  align-self: start;
+}
+.title-text {
+  font-size: 42px;
+  line-height: 1.6em;
+
+  /* font: var(--font_3); */
+  color: rgb(244, 244, 244);
+  letter-spacing: 0em;
+}
+.text-big {
+  font-size: 42px;
+  font-family: wfont_643d94_f52303b2efea42e1b4aeed119e42672e,
+    wf_f52303b2efea42e1b4aeed119, orig_tbc_x_black;
+}
+.text-small {
+  font-size: 34px;
+  font-family: wfont_643d94_f52303b2efea42e1b4aeed119e42672e,
+    wf_f52303b2efea42e1b4aeed119, orig_tbc_x_black;
+}
+
+@media (min-width: 1600px) {
+  .wider-image {
+    display: block;
+  }
+
+  /* Hide the initial image when the viewport is 1600px or wider */
+  .initial-image {
+    display: none;
+  }
 }
