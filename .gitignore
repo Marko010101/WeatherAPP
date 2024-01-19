@@ -1,0 +1,11 @@
+# Ignore Parcel output directory
+/dist/
+
+# Ignore Parcel cache and temporary files
+.cache/
+.parcel-cache/
+
+# Ignore Parcel lock file (if any)
+parcel-lock.json
+
+node_modules/

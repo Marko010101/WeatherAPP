@@ -1,3 +1,14 @@
+@import url("https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_bootstrap.c7f5f19a.min.css");
+@import url("https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_bootstrap-responsive.9ccc3fa4.min.css");
+@import url("https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_bootstrap-classic.a3137169.min.css");
+@import url("https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[HeaderContainer_AfterScroll].2b4c2174.min.css");
+@import url("https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[SkipToContentButton].39deac6a.min.css");
+@import url("https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[ClassicSection].78038a64.min.css");
+@import url("https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[SlideShowContainer].57652188.min.css");
+@import url("https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[SlideShowSlide].9456824f.min.css");
+@import url("https://static.parastorage.com/services/wix-thunderbolt/dist/Repeater_FixedColumns.9abcda74.chunk.min.css");
+@import "./fontsTbc.css";
+@import "./styleTbc.css";
 :root {
   --color_0: 255, 255, 255;
   --color_1: 255, 255, 255;
@@ -207,8 +218,11 @@
 }
 
 * {
+  border: 0;
   margin: 0;
+  outline: 0;
   padding: 0;
+  vertical-align: baseline;
   box-sizing: inherit;
 }
 
@@ -223,11 +237,6 @@ body {
 }
 .site-container {
   background: transparent;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-  vertical-align: baseline;
 }
 .header {
   background-color: var(
@@ -308,6 +317,7 @@ body {
 
   line-height: 2.6rem;
 }
-.navigation__text-active {
+.navigation__text-active,
+.navigation__text:hover {
   color: rgb(var(--txts, var(--color_14)));
 }

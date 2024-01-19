@@ -4,8 +4,14 @@
   "description": "\"# TBC\"",
   "default": "index.html",
   "scripts": {
-    "start": " index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "Marko",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.33.3",
+    "parcel": "^2.10.3",
+    "regenerator-runtime": "^0.14.0"
+  }
 }
