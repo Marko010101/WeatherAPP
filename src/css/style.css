@@ -292,6 +292,7 @@ body {
   width: 100%;
 }
 .navigation__list {
+  cursor: pointer;
   display: flex;
   align-items: center;
   list-style-type: none;
