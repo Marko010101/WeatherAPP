@@ -291,6 +291,9 @@ body {
   height: 100%;
   width: 100%;
 }
+.navigation__nav:last-child {
+  /* margin-left: 0.5rem; */
+}
 .navigation__list {
   cursor: pointer;
   display: flex;
@@ -301,6 +304,9 @@ body {
 
 .navigation__item {
   padding: 0 var(--pad, 5px);
+}
+.navigation__item:nth-child(4) {
+  margin-left: -1px;
 }
 
 .navigation__link {
