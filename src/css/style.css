@@ -295,7 +295,7 @@ body {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 27px;
+  height: 24px;
   justify-content: space-between;
   transition: transform 0.33s ease-out;
   width: 26px;
@@ -395,7 +395,6 @@ body {
     wf_f52303b2efea42e1b4aeed119, orig_tbc_x_black;
 }
 .section-intro {
-  /* margin-top: -0.3rem; */
   position: static;
   display: grid;
   height: auto;
@@ -480,7 +479,10 @@ body {
   }
   .section-intro-container {
     margin: 56px 16px 43px 16px; /* Adjust margin for smaller screens */
-    width: auto; /* Set width to auto for responsiveness */
+    width: auto;
+  }
+  .section-intro-text-span {
+    font-size: 16px;
   }
 }
 
