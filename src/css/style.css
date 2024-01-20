@@ -339,9 +339,7 @@ body {
   box-sizing: border-box;
 }
 .section-title {
-  --fill-layer-image-opacity: 1;
   --bg-overlay-color: rgb(43, 43, 43);
-  --bg-gradient: none;
   min-width: 980px;
   left: 0;
   margin-left: 0;
@@ -352,7 +350,7 @@ body {
 }
 .title-background-image {
   width: 100%;
-  height: 352px;
+  height: 35.2rem;
   object-fit: cover;
   object-position: 50% 50%;
 }
@@ -477,11 +475,16 @@ body {
     display: flex;
     justify-content: space-around;
   }
+  .section-title {
+    min-width: 100%;
+  }
+  .section-intro-container {
+    margin: 56px 16px 43px 16px; /* Adjust margin for smaller screens */
+    width: auto; /* Set width to auto for responsiveness */
+  }
 }
 
 @media only screen and (max-width: 575px) {
-  .header {
-  }
 }
 
 @media only screen and (max-width: 768px) {
