@@ -21,6 +21,12 @@
   left: 0;
   z-index: 1000;
 }
+.header-scrolled {
+  background-color: rgba(
+    var(--bg-scrl, var(--color_11)),
+    var(--alpha-bg-scrl, 1)
+  );
+}
 
 /* DESKTOP HEADER  */
 .header__container {
