@@ -1,0 +1,77 @@
+@media only screen and (max-width: 375px) {
+  .header__container {
+    display: none;
+  }
+  .header-mobile {
+    display: flex;
+    justify-content: space-around;
+  }
+  .header-mobile-link {
+    padding: 2.15rem 9.55rem 2.2rem 0;
+  }
+  .section-title {
+    min-width: 100%;
+  }
+  .title-background-image {
+    margin-top: -3px;
+    width: 100%;
+    height: 25rem;
+  }
+  .section-title-text {
+    margin: 5.2rem 2.4rem;
+  }
+  .title-text {
+    font-size: 28px;
+  }
+  .text-big {
+    font-size: 28px;
+  }
+  .text-small {
+    font-size: 26px;
+  }
+  .section-intro-container {
+    margin: 3.6rem 2.4rem;
+    width: auto;
+  }
+  .section-intro-text {
+    line-height: 1;
+  }
+  .section-intro-text-span {
+    font-size: 18.5px;
+  }
+  .btn-discover {
+    margin: 1.5rem 0rem 5rem 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 992px) {
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1599px) {
+  .section-intro {
+    margin-top: -0.3rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .btn-discover-span {
+    margin-top: 0.6rem;
+  }
+
+  .wider-image {
+    display: block;
+  }
+
+  .initial-image {
+    display: none;
+  }
+}
