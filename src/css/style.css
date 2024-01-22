@@ -13,6 +13,11 @@
 @import url("variables.css");
 @import url("headerDesktop.css");
 @import url("headerMobile.css");
+@import url("courses.css");
+
+:root {
+  --arrowColor: 232, 230, 230;
+}
 
 * {
   border: 0;
@@ -173,16 +178,13 @@ body {
 .btn-discover-span:hover {
   color: var(--corvid-color, rgb(var(--color_12)));
 }
-
-/* SECTION COURSES */
-.courses-section {
-  height: auto;
-  width: 100%;
-  background-color: rgb(22, 22, 22);
+/* SECTION-PARTNERS */
+.section-partners {
+  background-color: rgb(43, 43, 43);
   min-width: 980px;
 }
 
-.courses-section-container {
+.section-partners-container {
   position: static;
   display: grid;
   height: auto;
@@ -191,132 +193,164 @@ body {
   grid-template-rows: min-content 1fr;
   grid-template-columns: 100%;
 }
-
-.courses-section-container-header {
+.section-partners-container-header {
   position: relative;
-  margin: 34px 0px 67px calc((100% - 980px) * 0.5);
+  margin: 34px 0px 31px calc((100% - 980px) * 0.5);
   left: 0px;
   grid-area: 1 / 1 / 2 / 2;
   justify-self: start;
   align-self: start;
+  width: 450px;
+  height: auto;
 }
-.courses-section-container-header span {
-  font: var(--font_6);
+.section-partners-container-header h1 {
+}
+.section-partners-container-header h1 span {
+  font: var(--font_3);
+  font-size: 24px;
   color: rgb(244, 244, 244);
   letter-spacing: 0em;
-  font-size: 24px;
-  line-height: normal;
 }
-
-.courses-section-container-courses {
+.sectio-partners-container-items {
   position: relative;
-  margin: 0px 0px 58px calc((100% - 980px) * 0.5);
-  left: 0px;
-  grid-area: 2 / 1 / 3 / 2;
-  justify-self: start;
-  align-self: start;
-  width: 980px;
-}
-
-.courses-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 4rem;
-  grid-row-gap: 2.5rem;
-}
-
-.courses-list-item {
-  position: static;
-  display: grid;
-  height: auto;
-  width: 30rem;
-  min-height: auto;
-  margin-top: -2px;
-  grid-template-rows: repeat(4, min-content) 1fr;
-  grid-template-columns: 100%;
-
-  --bg-overlay-color: rgb(22, 22, 22);
-  --bg-gradient: none;
-  border-width: 1px 1px 1px 1px;
-  border-style: solid solid solid solid;
-  border-color: rgba(85, 85, 85, 1) rgba(85, 85, 85, 1) rgba(85, 85, 85, 1)
-    rgba(85, 85, 85, 1);
-  border-radius: 6px 6px 6px 6px;
-  overflow: hidden;
-  transform: translateZ(0);
-  margin: -1px;
-}
-
-.courses-list-item-image {
-  position: relative;
-  margin: 0px 0px 34px 0;
-  left: 0px;
-  grid-area: 1 / 1 / 2 / 2;
-  justify-self: start;
-  align-self: start;
-  width: 30rem;
-  height: 15rem;
-  object-fit: cover;
-}
-
-.courses-list-item h5 {
-  position: relative;
-  margin: 0 2.5rem 2.5rem 0;
-  left: 22px;
+  margin: 0px 0px 36px calc((100% - 980px) * 0.5);
   grid-area: 2 / 1 / 3 / 2;
   justify-self: start;
   align-self: start;
 }
-.courses-list-item h5 span {
-  color: #f4f4f4;
-  font-family: wfont_643d94_dd28b3957391427eb54de1c9eff7cfb1,
-    wf_dd28b3957391427eb54de1c9e, orig_tbc_x_regular;
-  font: var(--font_5);
-  font-size: 18px;
+
+.section-partners-slider {
+  height: 22.5rem;
 }
-.courses-list-item p {
+.slider-list {
   position: relative;
-  margin: 0px 0px 10px 0;
-  left: 22px;
-  grid-area: 3 / 1 / 4 / 2;
-  justify-self: start;
-  align-self: start;
-}
-.courses-list-item p span {
-  font: var(--font_9);
-  color: rgb(244, 244, 244);
-  font-size: 14px;
-}
-.btn-course-details {
-  position: relative;
-  margin: 9rem 0 2.5rem 0;
-  left: 22px;
-  grid-area: 5 / 1 / 6 / 2;
-  justify-self: start;
-  align-self: start;
+  list-style-type: none;
 }
 
-.btn-course-details div {
+.slider-list-item {
+  position: absolute;
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  justify-content: center;
+  /* gap: 12rem; */
+  margin-top: 6.5rem;
+
+  opacity: 0;
+  transition: opacity 1.3s;
+}
+.center {
+  position: absolute;
+  margin-left: 37.5rem;
 }
 
-.btn-course-details div a {
-  font: var(--fnt, var(--font_5));
-  color: rgb(var(--txts, var(--color_14)));
-  font-weight: 600;
-  letter-spacing: 0.25px;
-  text-decoration: none;
-  font-size: 1.6rem;
-  transition: color 0.4s ease;
+.slider-list-item img {
+  object-fit: cover;
+  object-position: 50% 50%;
 }
-.btn-course-details div a:hover {
-  color: rgb(5, 136, 184);
+.partners-btn-prev {
+  position: absolute;
+  left: 6%;
+}
+
+.partners-btn-next {
+  transform: scaleX(-1);
+  position: absolute;
+  right: 6%;
+}
+.partners-btn-next,
+.partners-btn-prev {
+  cursor: pointer;
+  background-color: inherit;
+  margin-top: 20rem;
+  width: 1.8rem;
+  z-index: 1;
+  margin-top: 20rem;
+  width: 1.8rem;
+  z-index: 1;
+}
+
+.partners-btn-next:hover,
+.partners-btn-prev:hover {
+  opacity: 0.6;
+}
+
+.svg-partners {
+  fill: rgba(var(--arrowColor, var(--color_12)), var(--alpha-arrowColor, 1));
+  stroke: rgba(var(--arrowColor, var(--color_12)), var(--alpha-arrowColor, 1));
+  stroke-width: 1px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 3.1%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #fff;
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 50%;
+  margin-right: 1.2rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  z-index: 10;
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  background-color: #2c2323;
+  opacity: 1;
+}
+
+/* IMAGE WIDTH AND HEIGHT */
+.usaid-img {
+  width: 24.6rem;
+  height: 7.4rem;
+}
+.space-img {
+  width: 24rem;
+  height: 8rem;
+  margin-left: 12.3rem;
+}
+.tinet-img {
+  width: 25rem;
+  height: 4.5rem;
+  margin-left: 12rem;
+}
+.tegeta-img {
+  width: 24.8rem;
+  height: 7.1rem;
+}
+.spectre-img {
+  width: 18.7rem;
+  height: 6.4rem;
+  margin-left: 14.8rem;
+}
+.tbc-img {
+  width: 31.2rem;
+  height: 9.5rem;
+  margin-left: 8.7rem;
+}
+.ufc-img {
+  width: 22.7rem;
+  height: 6.4rem;
+  margin-top: 2rem;
+}
+
+.d-flex {
+  opacity: 1;
 }
 
 .d-none {
-  display: none;
+  opacity: 0;
+  pointer-events: none; /* Optional: disable pointer events when hidden */
 }
 
 @media only screen and (max-width: 376px) {
@@ -411,9 +445,6 @@ body {
   }
   .btn-course-details {
     margin: 0.5rem 0 3rem 0;
-  }
-
-  .btn-course-details div {
   }
 }
 
