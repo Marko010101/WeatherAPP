@@ -249,13 +249,13 @@ body {
 }
 .partners-btn-prev {
   position: absolute;
-  left: 6%;
+  left: 10rem;
 }
 
 .partners-btn-next {
   transform: scaleX(-1);
   position: absolute;
-  right: 6%;
+  right: 10rem;
 }
 .partners-btn-next,
 .partners-btn-prev {
