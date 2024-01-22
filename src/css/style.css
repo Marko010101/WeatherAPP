@@ -305,7 +305,7 @@ body {
 }
 
 .dots__dot--active {
-  background-color: #2c2323;
+  /* background-color: #2c2323; */
   opacity: 1;
 }
 
@@ -350,7 +350,7 @@ body {
 
 .d-none {
   opacity: 0;
-  pointer-events: none; /* Optional: disable pointer events when hidden */
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 376px) {

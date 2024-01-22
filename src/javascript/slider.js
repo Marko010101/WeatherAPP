@@ -1,3 +1,7 @@
+"use strict";
+
+// Slider
+
 const slider = function () {
   const slides = document.querySelectorAll(".slider-list-item");
   const btnLeft = document.querySelector(".partners-btn-prev");
@@ -6,6 +10,8 @@ const slider = function () {
 
   let curSlide = 0;
   const maxSlide = slides.length;
+
+  let interval;
 
   // Functions
   const createDots = function () {
@@ -22,7 +28,7 @@ const slider = function () {
       .querySelectorAll(".dots__dot")
       .forEach((dot) => dot.classList.remove("dots__dot--active"));
     document
-      .querySelector(`.dots__dot[data-slide = "${slide}"]`)
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
       .classList.add("dots__dot--active");
   };
 
@@ -32,7 +38,7 @@ const slider = function () {
         s.classList.add("d-flex");
         s.classList.remove("d-none");
       } else {
-        s.classList.remove("d-flex"); // Remove from all slides
+        s.classList.remove("d-flex");
         s.classList.add("d-none");
       }
     });
@@ -43,7 +49,7 @@ const slider = function () {
       if (i === slide) {
         dot.classList.add("d-flex");
       } else {
-        dot.classList.remove("d-flex"); // Remove from all dots
+        dot.classList.remove("d-flex");
       }
     });
   };
@@ -67,29 +73,49 @@ const slider = function () {
     goToSlide(curSlide);
     activateDot(curSlide);
   };
-  // Next slide
 
   const init = function () {
     goToSlide(0);
     createDots();
-
     activateDot(0);
   };
   init();
+
+  const setNewInterval = function () {
+    clearInterval(interval);
+    interval = setInterval(nextSlide, 3000);
+  };
+
+  setNewInterval();
+
   // Event handlers
-  btnRight.addEventListener("click", nextSlide);
-  btnLeft.addEventListener("click", prevSlide);
+  btnRight.addEventListener("click", function () {
+    nextSlide();
+    setNewInterval();
+  });
+
+  btnLeft.addEventListener("click", function () {
+    prevSlide();
+    setNewInterval();
+  });
 
   document.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowLeft") prevSlide();
-    if (e.key === "ArrowRight") nextSlide();
+    if (e.key === "ArrowLeft") {
+      prevSlide();
+      setNewInterval();
+    }
+    if (e.key === "ArrowRight") {
+      nextSlide();
+      setNewInterval();
+    }
   });
 
   dotContainer.addEventListener("click", function (e) {
     if (e.target.classList.contains("dots__dot")) {
-      const slide = parseInt(e.target.dataset.slide, 10); // Convert to number
+      const slide = parseInt(e.target.dataset.slide, 10);
       goToSlide(slide);
       activateDot(slide);
+      setNewInterval();
     }
   });
 };
