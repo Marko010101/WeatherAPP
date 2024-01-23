@@ -10,9 +10,16 @@
   "author": "Marko",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.3.2",
     "core-js": "^3.33.3",
+    "normalize.css": "^8.0.1",
     "parcel": "^2.10.3",
     "regenerator-runtime": "^0.14.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.17"
   }
 }

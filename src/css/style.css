@@ -9,6 +9,7 @@
 @import url("https://static.parastorage.com/services/wix-thunderbolt/dist/Repeater_FixedColumns.9abcda74.chunk.min.css");
 @import "./fontsTbc.css";
 @import "./styleTbc.css"; */
+@import "../../node_modules/normalize.css/normalize.css";
 
 @import url("variables.css");
 @import url("headerDesktop.css");
