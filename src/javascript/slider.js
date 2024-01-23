@@ -35,21 +35,21 @@ const slider = function () {
   const goToSlide = function (slide) {
     slides.forEach((s, i) => {
       if (i === slide) {
-        s.classList.add("d-flex");
-        s.classList.remove("d-none");
+        s.classList.add("displayed");
+        s.classList.remove("notDisplayed");
       } else {
-        s.classList.remove("d-flex");
-        s.classList.add("d-none");
+        s.classList.remove("displayed");
+        s.classList.add("notDisplayed");
       }
     });
 
-    // Mark the clicked dot as d-flex
+    // Mark the clicked dot as displayed
     const dots = document.querySelectorAll(".dots__dot");
     dots.forEach((dot, i) => {
       if (i === slide) {
-        dot.classList.add("d-flex");
+        dot.classList.add("displayed");
       } else {
-        dot.classList.remove("d-flex");
+        dot.classList.remove("displayed");
       }
     });
   };
