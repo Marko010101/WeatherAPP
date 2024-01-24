@@ -120,6 +120,4 @@ const slider = function () {
   });
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-  slider();
-});
+slider();
