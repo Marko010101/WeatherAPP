@@ -1,6 +1,8 @@
-const buttons = document.querySelectorAll(".btn-opener");
-const paragraphs = document.querySelectorAll(".section-questions-paragraph");
-const arrows = document.querySelectorAll(".arrowDown");
+const buttons = Array.from(document.querySelectorAll(".btn-opener"));
+const paragraphs = Array.from(
+  document.querySelectorAll(".section-questions-paragraph")
+);
+const arrows = Array.from(document.querySelectorAll(".arrowDown"));
 
 buttons.forEach((button, index) => {
   button.addEventListener("click", () => {
