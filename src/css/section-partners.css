@@ -5,7 +5,7 @@
 }
 
 .section-partners-container {
-  position: static;
+  position: relative;
   display: grid;
   height: auto;
   width: 100%;
@@ -70,7 +70,7 @@
 }
 
 .partners-btn-next {
-  transform: scaleX(-1);
+  /* transform: scaleX(-1); */
   position: absolute;
   right: 10rem;
 }

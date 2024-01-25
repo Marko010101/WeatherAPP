@@ -119,5 +119,6 @@ const slider = function () {
     }
   });
 };
-
-slider();
+document.addEventListener("DOMContentLoaded", function () {
+  slider();
+});
