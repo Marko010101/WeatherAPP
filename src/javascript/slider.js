@@ -24,15 +24,12 @@ const slider = function () {
   };
 
   const activateDot = function (slide) {
-    const targetDot = document.querySelector(
-      `.dots__dot[data-slide="${slide}"]`
-    );
-    if (targetDot) {
-      document
-        .querySelectorAll(".dots__dot")
-        .forEach((dot) => dot.classList.remove("dots__dot--active"));
-      targetDot.classList.add("dots__dot--active");
-    }
+    document
+      .querySelectorAll(".dots__dot")
+      .forEach((dot) => dot.classList.remove("dots__dot--active"));
+    document
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
+      .classList.add("dots__dot--active");
   };
 
   const goToSlide = function (slide) {
