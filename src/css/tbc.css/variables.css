@@ -141,4 +141,7 @@
   --alpha-txts: 1;
   --alpha-bgDrop: 1;
   --boxShadowToggleOn-shd: none;
+  /* --item-display: inline-block; */
+  --item-size: 39px;
+  --item-margin: 0px 10px 0px 0px;
 }
