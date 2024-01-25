@@ -14,21 +14,30 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", handleScroll);
 });
 
-//  If the mobile-header is active, the header will disappear on scrolling down.
-if (mobileHeader) {
-  let prevScrollPos = window.pageYOffset;
+//  If screen width is less than 420px, the header will disappear on scrolling down.
+document.addEventListener("DOMContentLoaded", function () {
+  function handleScroll() {
+    const scrollPosition = window.scrollY;
 
-  window.addEventListener("scroll", function () {
-    const currentScrollPos = window.pageYOffset;
+    if (mobileHeader && window.innerWidth < 420) {
+      const currentScrollPos = window.scrollY;
 
-    if (prevScrollPos < currentScrollPos) {
-      // Scrolling down
-      header.style.transform = "translateY(-100%)";
+      if (prevScrollPos < currentScrollPos) {
+        header.style.transform = "translateY(-100%)";
+      } else {
+        header.style.transform = "translateY(0)";
+      }
+
+      prevScrollPos = currentScrollPos;
     } else {
-      // Scrolling up
-      header.style.transform = "translateY(0)";
+      if (scrollPosition > 1) {
+        header.classList.add("header-scrolled");
+      } else {
+        header.classList.remove("header-scrolled");
+      }
     }
+  }
 
-    prevScrollPos = currentScrollPos;
-  });
-}
+  let prevScrollPos = window.pageYOffset;
+  window.addEventListener("scroll", handleScroll);
+});
