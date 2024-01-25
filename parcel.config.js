@@ -9,9 +9,7 @@ module.exports = {
     {
       name: "preset-default",
       params: {
-        overrides: {
-          // Specify any overrides or additional configurations here
-        },
+        overrides: {},
       },
     },
   ],
