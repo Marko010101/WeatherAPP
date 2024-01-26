@@ -14,12 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", handleScroll);
 });
 
-//  If screen width is less than 420px, the header will disappear on scrolling down.
+//  If screen width is less than 750px, the header will disappear on scrolling down.
 document.addEventListener("DOMContentLoaded", function () {
   function handleScroll() {
     const scrollPosition = window.scrollY;
 
-    if (mobileHeader && window.innerWidth < 420) {
+    if (scrollPosition === 0) {
+      header.style.transform = "translateY(0)";
+    }
+
+    if (mobileHeader && window.innerWidth < 750) {
       const currentScrollPos = window.scrollY;
 
       if (prevScrollPos < currentScrollPos) {
