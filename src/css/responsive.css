@@ -391,6 +391,28 @@
     width: 33px;
     height: 27px;
   }
+  /* SIDEBAR */
+  .piece-menu-1 {
+    transform-origin: right;
+    transition: transform 0.33s cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    width: 110%;
+    transform: rotate(45deg) translateY(3rem) translateX(1.6rem);
+  }
+
+  .piece-menu-3 {
+    align-self: flex-end;
+    transform-origin: left;
+    transform: rotate(-45deg) translateY(1rem) translateX(-0.8rem);
+    width: 110%;
+  }
+  .header-mobile-nav-list {
+    padding-top: 6rem;
+    gap: 6.5rem;
+  }
+
+  .header-mobile-nav-list-item {
+    font-size: 1.8rem;
+  }
 
   /* SECTION_TITLE */
   .section-title {

@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="src/css/tbc.css/styleTbc.css" />
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="stylesheet" href="src/css/responsive.css" />
-
-    <script type="module" defer src="src/javascript/scroll.js"></script>
+    <script async type="module" src="src/javascript/sidebar.js"></script>
+    <script defer type="module" src="src/javascript/scroll.js"></script>
     <script defer src="src/javascript/slider.js"></script>
 
     <title>TBC x USAID</title>
@@ -65,7 +65,7 @@
             <img src="src/img/headerMobile.svg" alt="header svg mobile" />
           </a>
           <div class="sidebar">
-            <div class="sidebar-icon">
+            <div class="sidebar-icon" id="menuIcon">
               <div>
                 <div class="piece piece-1"></div>
                 <div class="piece piece-2"></div>
@@ -73,8 +73,17 @@
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- <div class="header-mobile-nav">
+        <div class="menu" id="mobileMenu">
+          <div class="menu-container">
+            <div class="menu-icon" id="closeMenu">
+              <div>
+                <div class="piece piece-menu-1"></div>
+                <div class="piece piece-menu-2"></div>
+                <div class="piece piece-menu-3"></div>
+              </div>
+            </div>
             <ul class="header-mobile-nav-list">
               <li class="header-mobile-nav-list-item">
                 <a href="#">მთავარი</a>
@@ -83,15 +92,38 @@
                 <a href="#">TBC IT</a>
               </li>
               <li class="header-mobile-nav-list-item">
-                <a href="#">TBC x USAID</a>
+                <a id="navigation__text-active" href="#">TBC x USAID</a>
               </li>
               <li class="header-mobile-nav-list-item">
                 <a href="#">რისკები</a>
               </li>
             </ul>
-          </div> -->
+          </div>
         </div>
       </header>
+      <!-- <div class="menu sidebar-menu">
+        <div class="menu-container-sidebar">
+          <div class="menu-icon">
+            <div>
+              <h1>X</h1>
+            </div>
+          </div>
+          <ul class="header-mobile-nav-list">
+            <li class="header-mobile-nav-list-item">
+              <a href="#">მთავარი</a>
+            </li>
+            <li class="header-mobile-nav-list-item">
+              <a href="#">TBC IT</a>
+            </li>
+            <li class="header-mobile-nav-list-item">
+              <a href="#">TBC x USAID</a>
+            </li>
+            <li class="header-mobile-nav-list-item">
+              <a href="#">რისკები</a>
+            </li>
+          </ul>
+        </div>
+      </div> -->
 
       <main class="main">
         <section class="section-title">

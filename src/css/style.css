@@ -28,6 +28,17 @@ body {
   overflow-x: auto;
   overflow-y: scroll;
 }
+
+.menu-opened {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: brightness(0.7);
+  z-index: 1000;
+}
+
 .site-container {
   background: transparent;
   position: relative;
@@ -64,6 +75,13 @@ body {
 }
 .d-flex {
   display: flex;
+}
+.no-scroll {
+  overflow: hidden;
+}
+.sidebarFilter {
+  filter: brightness(0.6);
+  position: absolute;
 }
 
 @media only screen and (max-width: 575px) {
