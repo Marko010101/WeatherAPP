@@ -4,13 +4,14 @@
 
 const slider = function () {
   const slides = document.querySelectorAll(".slider-list-item");
+  const btnLeft = document.querySelector(".partners-btn-prev");
+  const btnRight = document.querySelector(".partners-btn-next");
   const dotContainer = document.querySelector(".dots");
 
   let curSlide = 0;
   const maxSlide = slides.length;
 
   let interval;
-  let touchStartX;
 
   // Functions
   const createDots = function () {
@@ -87,25 +88,17 @@ const slider = function () {
 
   setNewInterval();
 
-  // Touch event handlers
-  document.addEventListener("touchstart", function (e) {
-    touchStartX = e.touches[0].clientX;
-  });
-
-  document.addEventListener("touchend", function (e) {
-    const touchEndX = e.changedTouches[0].clientX;
-    const deltaX = touchEndX - touchStartX;
-
-    if (deltaX > 50) {
-      prevSlide();
-    } else if (deltaX < -50) {
-      nextSlide();
-    }
-
+  // Event handlers
+  btnRight.addEventListener("click", function () {
+    nextSlide();
     setNewInterval();
   });
 
-  // Event handlers
+  btnLeft.addEventListener("click", function () {
+    prevSlide();
+    setNewInterval();
+  });
+
   document.addEventListener("keydown", function (e) {
     if (e.key === "ArrowLeft") {
       prevSlide();
@@ -125,8 +118,33 @@ const slider = function () {
       setNewInterval();
     }
   });
+
+  // Touch event handlers
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  document.addEventListener("touchstart", function (e) {
+    touchStartX = e.touches[0].clientX;
+  });
+
+  document.addEventListener("touchend", function (e) {
+    touchEndX = e.changedTouches[0].clientX;
+    handleSwipe();
+  });
+
+  const handleSwipe = function () {
+    const swipeThreshold = 50;
+
+    if (touchStartX - touchEndX > swipeThreshold) {
+      // Swipe left
+      nextSlide();
+      setNewInterval();
+    } else if (touchEndX - touchStartX > swipeThreshold) {
+      // Swipe right
+      prevSlide();
+      setNewInterval();
+    }
+  };
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-  slider();
-});
+slider();

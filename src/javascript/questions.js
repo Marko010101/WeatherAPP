@@ -19,7 +19,7 @@ buttons.forEach((button, index) => {
     arrows[index].classList.toggle("arrowDown", !isOpen);
     arrows[index].classList.toggle("arrowUp", isOpen);
 
-    if (isOpen) {
+    isOpen &&
       paragraphs.forEach((p, i) => {
         if (index !== i) {
           p.style.transition = "max-height 0s ease";
@@ -28,6 +28,5 @@ buttons.forEach((button, index) => {
           arrows[i].classList.add("arrowDown");
         }
       });
-    }
   });
 });
