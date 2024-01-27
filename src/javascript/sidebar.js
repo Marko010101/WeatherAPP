@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       mobileMenu.style.right = "0";
       body.classList.add("no-scroll", "sidebarFilter");
       mobileMenu.style.filter = "brightness(1.65)";
-      mobileMenu.style.top = window.scrollY + "px";
+      mobileMenu.style.top = document.documentElement.scrollTop + "px";
     });
 
     closeMenu.addEventListener("click", function () {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
       body.classList.remove("no-scroll", "sidebarFilter");
     });
 
-    // If user clicks anything else insted of menu, menu will be closed
+    // If the user clicks anything else instead of the menu, the menu will be closed
     document.addEventListener("click", function (event) {
       const isClickInsideMenu = mobileMenu.contains(event.target);
       const isClickOnMenuIcon = menuIcon.contains(event.target);
