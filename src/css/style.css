@@ -83,23 +83,20 @@ body {
   filter: brightness(0.6);
   position: absolute;
 }
-
-@media only screen and (max-width: 575px) {
+.initial-image {
+  display: none;
 }
-
-@media only screen and (max-width: 768px) {
+.wider-image {
+  display: block;
 }
-
-@media only screen and (max-width: 992px) {
+.mobile-title-image {
+  display: none;
 }
-
-@media only screen and (max-width: 1200px) {
+.wide-image {
+  display: block;
 }
-
-@media only screen and (max-width: 1599px) {
-  .section-intro {
-    margin-top: -0.3rem;
-  }
+.mobile-img {
+  display: none;
 }
 
 @media only screen and (min-width: 1600px) {

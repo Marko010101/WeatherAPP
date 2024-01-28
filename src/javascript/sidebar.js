@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenu = document.getElementById("mobileMenu");
   const closeMenu = document.getElementById("closeMenu");
 
-  if (window.innerWidth < 750) {
+  if (window.innerWidth < 993) {
     menuIcon.addEventListener("click", function (event) {
       event.stopPropagation();
       mobileMenu.style.right = "0";
