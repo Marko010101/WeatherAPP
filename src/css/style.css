@@ -99,16 +99,3 @@ body {
   display: none;
 }
 
-@media only screen and (min-width: 1600px) {
-  .btn-discover-span {
-    margin-top: 0.6rem;
-  }
-
-  .wider-image {
-    display: block;
-  }
-
-  .initial-image {
-    display: none;
-  }
-}

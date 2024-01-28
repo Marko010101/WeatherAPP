@@ -8,7 +8,7 @@ I've included an SVG TBCxUSAID logo in the header along with navigation links.
 
 ## 2. Main Sections
 
-- **Section-title**: Features a title and a dynamic background image that changes based on the device's width. For devices wider than 1600px, a broader image is displayed.
+- **Section-title**: Features a title and a dynamic background image that adjusts based on the device's width. There are three image variations based on width breakpoints: up to 992px, from 992px to 1200-1600px, and 1600px and above.
 - **Section-intro**: Presents essential information.
 - **Section-course (Courses)**: Utilizes a combination of display grid and display flex.
 - **Section-partners (Slider)**: Implements a functional slider similar to the TBC original page. Slider transitions occur every 3 seconds. Manual navigation is possible through buttons and dots. Below 992px width, buttons disappear, and users can use dots or swipe to navigate.
@@ -20,7 +20,7 @@ The footer employs a grid system for easy responsiveness and position adjustment
 
 ## Responsive Design
 
-I've incorporated breakpoints at 376px, 420px, 768px, 992px, 1200px and 1600px (specifically for Title-image). The website is fully responsive. On devices below 768px, a menu appears, revealing navigation links with a right-to-left animation. Although I couldn't implement the menu-icon changing animation due to time constraints, I replaced it with an 'X' for simplicity. The slider adapts for mobile devices, allowing finger swipes.
+I've incorporated breakpoints at 0-376px, 376-420px, 420-768px, 768-992px, 992-1200px, and 1200-1600px (specifically for the Title-image). The website is fully responsive. On devices below 992px, a menu appears, revealing navigation links with a right-to-left animation. Although I couldn't implement the menu-icon changing animation due to time constraints, I transitioned the inner div to create the X from the menu icon. The slider adapts for mobile devices, allowing finger swipes.
 
 ## Technology Stack
 
@@ -41,4 +41,4 @@ npm install
 npm start
 ```
 
-or Alternatively, you can access the website directly at --- https://tbcxusaid.netlify.app/.
+or Alternatively, you can access My website directly at --- https://tbcxusaid.netlify.app/.
