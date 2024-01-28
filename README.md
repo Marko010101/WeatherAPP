@@ -10,7 +10,7 @@ I've included an SVG TBCxUSAID logo in the header along with navigation links.
 
 - **Section-title**: Features a title and a dynamic background image that adjusts based on the device's width. There are three image variations based on width breakpoints: up to 992px, from 992px to 1200-1600px, and 1600px and above.
 - **Section-intro**: Presents essential information.
-- **Section-course (Courses)**: Utilizes a combination of display grid and display flex.
+- **Section-course (Courses)**: Utilizes a combination of display grid and display flex. Every image is conditionally rendered; under 992px, smaller size images are displayed, and above 992px, larger ones are shown.
 - **Section-partners (Slider)**: Implements a functional slider similar to the TBC original page. Slider transitions occur every 3 seconds. Manual navigation is possible through buttons and dots. Below 992px width, buttons disappear, and users can use dots or swipe to navigate.
 - **Section-questions**: Displays frequently asked questions with clickable answers. Clicking a question changes the little arrow direction, indicating the question's state.
 
