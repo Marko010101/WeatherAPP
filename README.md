@@ -1,44 +1,70 @@
-# TBC x USAID
+# Getting Started with Create React App
 
-I crafted the TBCxUSAID webpage using a combination of CSS Grid and CSS Flexbox to achieve the best visual appeal and structure. Images are conditionally rendered depending on the device width for faster loading times. Up to 992px, smaller title-image and course-images are rendered. I am proficient in writing the equivalent code in SASS (SCSS) and React.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 1. Header
+## Available Scripts
 
-I've included an SVG TBCxUSAID logo in the header along with navigation links.
+In the project directory, you can run:
 
-## 2. Main Sections
+### `npm start`
 
-- **Section-title**: Features a title and a dynamic background image that adjusts based on the device's width. There are three image variations based on width breakpoints: up to 992px, from 992px to 1200-1600px, and 1600px and above.
-- **Section-intro**: Presents essential information.
-- **Section-course (Courses)**: Utilizes a combination of display grid and display flex. Every image is conditionally rendered; under 992px, smaller size images are displayed, and above 992px, larger ones are shown.
-- **Section-partners (Slider)**: Implements a functional slider similar to the TBC original page. Slider transitions occur every 3 seconds. Manual navigation is possible through buttons and dots. Below 992px width, buttons disappear, and users can use dots or swipe to navigate.
-- **Section-questions**: Displays frequently asked questions with clickable answers. Clicking a question changes the little arrow direction, indicating the question's state.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## 3. Footer
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-The footer employs a grid system for easy responsiveness and position adjustments.
+### `npm test`
 
-## Responsive Design
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-I've incorporated breakpoints at 0-376px, 376-420px, 420-768px, 768-992px, 992-1200px, and 1200-1600px (specifically for the Title-image). The website is fully responsive. On devices below 992px, a menu appears, revealing navigation links with a right-to-left animation. Although I couldn't implement the menu-icon changing animation due to time constraints, I transitioned the inner div to create the X from the menu icon. The slider adapts for mobile devices, allowing finger swipes.
+### `npm run build`
 
-## Technology Stack
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-I've utilized ES6 features and the following dependencies:
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- **Core-js**: For polyfilling JavaScript features, ensuring ES6 accessibility across browsers.
-- **Normalize.css**: Ensures consistent default styles across various browsers.
-- **Parcel**: Simplifies the bundling and building of web applications.
-- **Autoprefixer**: Automatically adds vendor prefixes to CSS rules.
-- **Regenerator-runtime**: Enables the use of ES6 generators and async/await syntax.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Running the Website
+### `npm run eject`
 
-To view the website, ensure Node.js is installed. I recommend cloning the repository, navigating to the project directory in your terminal, and running:
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-```bash
-npm install
-npm start
-```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-or Alternatively, you can access My website directly at --- https://tbcxusaid.netlify.app/.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
