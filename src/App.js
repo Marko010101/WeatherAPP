@@ -86,7 +86,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1>Classy Weather</h1>
+      <h1>Winter is comming</h1>
       <Input location={location} onChangeLocation={setLocation} />
 
       {isLoading && <p className="loader">Loading...</p>}
